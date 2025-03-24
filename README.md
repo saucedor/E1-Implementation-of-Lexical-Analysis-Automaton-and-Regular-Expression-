@@ -62,12 +62,30 @@ Enter a string composed of 0, 1, and 2: exit
 ```
 ### DFA
 
-Once the regular expression was fully defined, we explored its equivalent DFA. We began by identifying the five formal components that define a deterministic model. To construct the state diagram, we started with smaller sub-expressions based on the forbidden patterns and expanded from there, following recommendations by Michael Sipser.
-
+Once the regular expression was fully defined, we explored its equivalent DFA. We began by identifying the five formal components that define a deterministic model. To construct the state diagram, we started with smaller sub-expressions based on the forbidden patterns and expanded from there.
 This led to the creation of the final automaton diagram, which visually represents all valid transitions and the rejections for each disallowed sequence.
 
 The graphic above shows the resulting DFA, illustrating how the automaton navigates through states while avoiding the restricted sequences. This model was implemented in Prolog, and its behavior was verified through a comprehensive test suite (see test_automata.pl).
 
 ![image](https://github.com/user-attachments/assets/26f07407-9ac4-4c07-9df5-3abde2f75039)
 
+**To run the DFA expression script**
+```bash
+swipl
+?-load_files('main.pl').
+?-load_files('automata.pl').
+```
+In the case the string is valid: 
+
+```bash
+?- validate([1,1,1,1]).
+true.
+```
+
+In the case the string is not valid: 
+
+```bash
+?- validate([1,0,1,1]).
+false|.
+```
 
