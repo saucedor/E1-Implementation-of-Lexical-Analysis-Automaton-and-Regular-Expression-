@@ -189,3 +189,14 @@ In conclusion, both the DFA approach in Prolog and the regular expression approa
 
 ## Personal Conclusion
 
+After implementing and analyzing both options, I observed that they lead to very similar results, both the regular and ADF.
+Automata is particularly advantageous to me because it offers a structured approach to defining state transitions and constraints, offering flexibility to handle a wider range of patterns and constraints, including more complex rules. In many cases, automata can offer better performance compared to regular expressions, especially for larger input sizes or more complex patterns. However, my contention is that their implementation takes longer and requires more effort, and they are done in Prolog, which is more complex.
+
+Regular expressions are like Python: simple, fast, and easy to use, especially in a simple program like the one we implemented. However, this lacks the advantages of ADF: a structured approach to defining state transitions and constraints, offering flexibility to manage a wider range of patterns and constraints, including more complex rules.
+
+If we consider the complexity of the project, the best option for me would be regular expression due to its ease and speed, but if in the future the program needs scalability or an extension/improvement, I prefer ADF.
+
+### References 
+Moreno, F. (2023). Tema 3: Autómatas finitos. Recuperado de https://www.uhu.es/francisco.moreno/gii_mac/docs/Tema_3.pdf
+GeeksforGeeks. (2021, 3 de enero). Python – Regex Lookahead. GeeksforGeeks. https://www.geeksforgeeks.org/python-regex-lookahead/
+Garrido, P. M. (s.f.). Lexical_Analysis [Repositorio en GitHub]. https://github.com/paolamgarrido/Lexical_Analysis
